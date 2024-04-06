@@ -133,7 +133,8 @@ function evaluateExpr(expressionStr) {
         console.log(`Got ${result}`)
         // If a division by zero occured, error.
         if (isNaN(result)) {
-            return 'ERR: division by zero!'
+            result = 'ERR: division by zero!';
+            break;
         }
     }
     // Reset all toggles to initial states
